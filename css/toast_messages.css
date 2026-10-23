@@ -2,6 +2,14 @@
   overflow: hidden;
 }
 
+/* Hide original Drupal message wrappers; messages are rendered as toasts. */
+[data-drupal-messages],
+[data-drupal-messages] .messages,
+[data-izi-messages] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .iziToast-message {
   display: -webkit-box;
   -webkit-box-orient: vertical;
