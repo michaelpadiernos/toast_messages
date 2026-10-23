@@ -140,6 +140,9 @@
           });
 
           currentValue.dataset.iziProcessed = '1';
+          currentValue.setAttribute('hidden', 'hidden');
+          currentValue.style.display = 'none';
+          currentValue.style.visibility = 'hidden';
           currentValue.remove();
         });
 
@@ -155,10 +158,8 @@
         if (processMessages()) {
           return;
         }
-
-        $(context).find('[data-izi-messages]').each(function () {
-          this.style.setProperty('display', 'block', 'important');
-        });
+        // If toast initialization still fails, keep fallback markup hidden to
+        // avoid exposing raw message/code blocks in the page UI.
       }, 100);
     }
   };
