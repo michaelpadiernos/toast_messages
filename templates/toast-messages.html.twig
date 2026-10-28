@@ -21,7 +21,7 @@
  * @ingroup themeable
  */
 #}
-<div data-izi-messages style="display: none !important;">
+<div data-izi-messages hidden>
   {% for type, messages in message_list %}
     {% set iziType = (type == 'status') ? 'success' : type %}
       {% if messages|length > 1 %}
